@@ -801,38 +801,34 @@ hljs.initHighlightingOnLoad();
 <li>The individual&#39;s height in meters.</li>
 <li>If an individual&#39;s weight is not in kilograms, the individual&#39;s weight must be converted to 
 kilograms.</li>
-<li><p>If an individual&#39;s height is not in meters, the individual&#39;s height must be converted to
-meters.</p>
-
-<p>The next slide covers exhibits the server.R file for calculating Body Mass Index:</p></li>
+<li>If an individual&#39;s height is not in meters, the individual&#39;s height must be converted to
+meters.</li>
 </ul>
 
 </div>
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>server.R</h3>
+<h3>Body Mass Index Example</h3>
 <div class="slideContent" >
-<pre><code class="r">library(shiny)
-bodymassindex&lt;-function(weight,height) weight/((height)^2)
-shinyServer(function(input,output){
-output$inputValue1&lt;-renderPrint(
-{input$weight});output$inputValue2&lt;-
-renderPrint({input$height});
-output$prediction&lt;-
-renderPrint({bodymassindex(input$weight,
-input$height)})})
+<p>Now, we exhibit an example for calculating Body Mass Index of a person whose weight is 73 kg and whose height is 1.78 m:</p>
+
+<pre><code class="r">bodymassindex&lt;-function(weight,height) weight/((height)^2)
+bodymassindex(73,1.78)
+</code></pre>
+
+<pre><code>[1] 23.04002
 </code></pre>
 
 </div>
 
 </section>
 <section data-transition="linear" data-transition-speed="default">
-<h3>Description of server</h3>
+<h3>Brief description of the roles of ui.R and server.R </h3>
 <div class="slideContent" >
-<p>The bodymassindex function takes two arguments. The first argument is weight, and the second argument is height(in kilograms and meters, respectively). Then, it divides the weight by the square of the height. </p>
+<p>The bodymassindex function in server.R takes two arguments. The first argument is weight, and the second argument is height(in kilograms and meters, respectively). Then, it divides the weight by the square of the height. </p>
 
-<p>Once this function is defined, the server prints individual&#39;s inputs of weight and height. Finally, the server calculates the body mass index from the individual&#39;s inputs and prints the result.</p>
+<p>Once this function is defined, server.R prints individual&#39;s inputs of weight and height in ui.R. Finally, the server calculates the body mass index defined from the individual&#39;s inputs and prints the result in ui.R.</p>
 
 </div>
 

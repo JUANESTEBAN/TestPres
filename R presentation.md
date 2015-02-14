@@ -14,30 +14,28 @@ For this presentation, I want to show a simple code for calculating the body mas
 - If an individual's height is not in meters, the individual's height must be converted to
   meters.
   
-  The next slide covers exhibits the server.R file for calculating Body Mass Index:
 
-server.R
+
+Body Mass Index Example
 =================================================================================================
-
+  Now, we exhibit an example for calculating Body Mass Index of a person whose weight is 73 kg and whose height is 1.78 m:
+  
 
 ```r
-library(shiny)
 bodymassindex<-function(weight,height) weight/((height)^2)
-shinyServer(function(input,output){
-output$inputValue1<-renderPrint(
-{input$weight});output$inputValue2<-
-renderPrint({input$height});
-output$prediction<-
-renderPrint({bodymassindex(input$weight,
-input$height)})})
+bodymassindex(73,1.78)
 ```
 
-Description of server
+```
+[1] 23.04002
+```
+
+Brief description of the roles of ui.R and server.R 
 =================================================================================================
 
-The bodymassindex function takes two arguments. The first argument is weight, and the second argument is height(in kilograms and meters, respectively). Then, it divides the weight by the square of the height. 
+The bodymassindex function in server.R takes two arguments. The first argument is weight, and the second argument is height(in kilograms and meters, respectively). Then, it divides the weight by the square of the height. 
 
-Once this function is defined, the server prints individual's inputs of weight and height. Finally, the server calculates the body mass index from the individual's inputs and prints the result.
+Once this function is defined, server.R prints individual's inputs of weight and height in ui.R. Finally, the server calculates the body mass index defined from the individual's inputs and prints the result in ui.R.
 
 References
 =================================================================================================
