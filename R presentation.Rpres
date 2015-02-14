@@ -40,8 +40,8 @@ Once this function is defined, the server prints individual's inputs of weight a
 
 References
 =================================================================================================
-Clicking on the link below lets you go my ui.R code and server.R code. 
-[ui.R and server.R]("https://github.com/JUANESTEBAN/datasciencecoursera/tree/master/shinyapps",
-  "ui.R and server.R codes")
-Clicking on this other link below lets you go to the shiny application.
-[Shiny application]("https://juanestebanrestrepo.shinyapps.io/shinyapps")
+Clicking on the link below lets you go to my ui.R code and server.R code. 
+[ui.R and server.R](https://github.com/JUANESTEBAN/datasciencecoursera/tree/master/shinyapps)
+
+Clicking on this other link below lets you go to my shiny application.
+[Shiny Application](https://juanestebanrestrepo.shinyapps.io/shinyapps)
